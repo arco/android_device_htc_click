@@ -1,8 +1,5 @@
 #!/system/bin/sh
 
-# Initial calibration
-echo '824,855,206,865,509,502,826,139,201,142' > /sys/class/input/input1/calibration_points
-
 SETTINGSDB=/data/data/com.android.providers.settings/databases/settings.db
 if [ ! -f $SETTINGSDB ] ;
 then

@@ -41,6 +41,10 @@ on boot
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
 
+    # write screen calibration
+    write /sys/class/input/input1/calibration 8
+    write /sys/class/input/input1/calibration_points 824,855,206,865,509,502,826,139,201,142
+
     # bluetooth power up/down interface
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
