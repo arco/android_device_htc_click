@@ -15,8 +15,8 @@
 -->
 
 <resources>
-	<string name="rom_mod_string">nFinityROM</string>
-	<bool name="force_hidden_settings">true</bool>
+    <string name="rom_mod_string">nFinityROM</string>
+    <bool name="force_hidden_settings">true</bool>
     <bool name="config_desktopRotation">true</bool> 
     <integer name="config_desktopSpeed">600</integer>
     <integer name="config_desktopBounce">30</integer>
