@@ -12,7 +12,6 @@ PRODUCT_COPY_FILES += \
 
 # proprietary for etc
 PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/05mountsd:system/etc/init.d/05mountsd \
     device/htc/tattoo/custom/10calibrate_screen:system/etc/init.d/10calibrate_screen \
     device/htc/tattoo/custom/hosts:system/etc/hosts \
     device/htc/tattoo/custom/sysctl.conf:system/etc/sysctl.conf \
