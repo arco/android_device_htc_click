@@ -49,8 +49,6 @@ BOARD_KERNEL_BASE := 0x02E00000
 
 BOARD_USES_GENERIC_AUDIO := false
 
-BOARD_USE_HTC_LIBSENSORS := true
-
 # Use HTC USB Function Switch to enable tethering via USB
 BOARD_USE_HTC_USB_FUNCTION_SWITCH := true
 
@@ -74,18 +72,15 @@ BOARD_EGL_CFG := device/htc/tattoo/egl.cfg
 
 BOARD_USES_QCOM_LIBS := true
 
-BOARD_USE_OPENSSL_ENGINE := true
-
 # Doesn't work yet, as AMSS realy should be 1355 for tattoo
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := bahamas
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 6225
 
-WITH_JIT := true
-JS_ENGINE:=v8
-
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 
 BOARD_NO_RGBX_8888 := true
+
+JS_ENGINE := v8
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 
