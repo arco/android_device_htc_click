@@ -26,7 +26,8 @@ PRODUCT_COPY_FILES += \
 
 # proprietary for /system/bin
 PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/compcache:system/bin/compcache
+    device/htc/tattoo/custom/compcache:system/bin/compcache \
+    device/htc/tattoo/custom/rzscontrol:system/bin/rzscontrol
 
 # proprietary for /system/usr/keychars and /system/usr/keylayout
 PRODUCT_COPY_FILES += \
