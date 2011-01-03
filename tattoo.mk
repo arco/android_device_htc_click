@@ -34,12 +34,12 @@ $(call inherit-product, device/htc/tattoo/tattoo-vendor-blobs.mk)
 
 PRODUCT_PACKAGES += \
     librs_jni \
-    bahamas-keypad.kcm \
     sensors.bahamas \
     lights.bahamas \
     gps.bahamas \
-    gralloc.bahamas \
+    bahamas-keypad.kcm \
     copybit.msm7k \
+    gralloc.bahamas \
     libOmxCore \
     libmm-omxcore \
     wlan_loader \
@@ -103,10 +103,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # 0 => WCDMA Preferred.
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=0 \
-    ro.com.android.dataroaming=false
+    ro.com.android.dataroaming=false \
+    ro.com.google.locationfeatures=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=65536
+    ro.opengles.version=65536 \
+    persist.sys.use_dithering=0
 
 # Disable fs check on boot by default
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -123,9 +125,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Enable compcache
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.compcache.default=18
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.locationfeatures=1
 
 # media configuration xml file
 PRODUCT_COPY_FILES += \
