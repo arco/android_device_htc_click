@@ -1,21 +1,7 @@
-# Copyright (C) 2008 The Android Open Source Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 on early-init
     device mtd@misc 0460 radio diag
 
-# Set timeout value for rmnet stats.
+    # set timeout value for rmnet stats
     write /sys/devices/virtual/net/rmnet0/timeout_suspend 5000000
     write /sys/devices/virtual/net/rmnet0/timeout 18000000
 
@@ -42,13 +28,24 @@ on boot
     chown dhcp dhcp /data/misc/dhcp
 
     # write screen calibration
-    write /sys/class/input/input1/calibration 8
     write /sys/class/input/input1/calibration_points 824,855,206,865,509,502,826,139,201,142
 
     # bluetooth power up/down interface
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chmod 0660 /sys/class/rfkill/rfkill0/state
+
+    # permissions for liblights
+    chown system system /sys/class/leds/green/brightness
+    chown system system /sys/class/leds/green/blink
+    chown system system /sys/class/leds/amber/brightness
+    chown system system /sys/class/leds/amber/blink
+    chown system system /sys/class/leds/button-backlight/brightness
+    chown system system /sys/class/leds/lcd-backlight/brightness
+    
+    # cpufreq configurations
+    write /sys/devices/system/cpu/cpu0/cpufreq/ondemand/sampling_rate 40000
+    write /sys/devices/system/cpu/cpu0/cpufreq/ondemand/up_threshold 85
 
 # compass/accelerometer daemon
 service akm8973 /system/bin/akm8973
