@@ -68,6 +68,9 @@
     <item>"tiwlan\\d"</item>
     </string-array>
 
+    <!-- If this is true, the screen will fade off. -->
+    <bool name="config_animateScreenLights">true</bool>
+
     <!-- XXXXXX END OF RESOURCES USING WRONG NAMING CONVENTION -->
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
@@ -84,5 +87,5 @@
 
     <!-- Handle notifications differently if device only uses an amber/green
     LED. This also needs a liblights module that enables them accordingly. -->
-    <bool name="config_amber_green_light">true</bool>
+    <bool name="config_amber_green_light">false</bool>
 </resources>
