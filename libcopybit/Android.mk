@@ -1,4 +1,4 @@
-# Copyright (C) 2009 The Android Open Source Project
+# Copyright (C) 2008 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,11 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := $(my-dir)
-subdir_makefiles := \
-        $(LOCAL_PATH)/libcopybit/Android.mk \
-        $(LOCAL_PATH)/libgralloc/Android.mk \
-        $(LOCAL_PATH)/liblights/Android.mk \
-	$(LOCAL_PATH)/libsensors/Android.mk
 
-include $(subdir_makefiles)
+LOCAL_PATH:= $(call my-dir)
+# HAL module implemenation, not prelinked and stored in
+# hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
+
+include $(CLEAR_VARS)
+LOCAL_MODULE_TAGS := optional
+LOCAL_PRELINK_MODULE := false
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
+LOCAL_SHARED_LIBRARIES := liblog
+LOCAL_SRC_FILES := copybit.cpp
+LOCAL_MODULE := copybit.bahamas
+LOCAL_C_INCLUDES += hardware/msm7k/libgralloc
+LOCAL_CFLAGS += -DCOPYBIT_MSM7K=1
+include $(BUILD_SHARED_LIBRARY)

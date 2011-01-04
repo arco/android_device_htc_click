@@ -34,11 +34,11 @@ $(call inherit-product, device/htc/tattoo/tattoo-vendor-blobs.mk)
 
 PRODUCT_PACKAGES += \
     librs_jni \
+    bahamas-keypad.kcm \
     sensors.bahamas \
     lights.bahamas \
     gps.bahamas \
-    bahamas-keypad.kcm \
-    copybit.msm7k \
+    copybit.bahamas \
     gralloc.bahamas \
     libOmxCore \
     libmm-omxcore \
