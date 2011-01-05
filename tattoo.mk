@@ -40,7 +40,8 @@ $(call inherit-product, device/htc/tattoo/tattoo-vendor-blobs.mk)
 
 PRODUCT_PACKAGES += \
     librs_jni \
-    sensors.bahamas
+    sensors.bahamas \
+    lights.bahamas
 
 # Add normal Gallery
 PRODUCT_PACKAGES += Gallery
