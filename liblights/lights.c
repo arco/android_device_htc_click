@@ -102,7 +102,7 @@ is_lit(struct light_state_t const* state)
 static int
 handle_trackball_light_locked(struct light_device_t* dev)
 {
-    //no trackball light for inc
+    //no trackball light for Tattoo
     return 0;
 }
 
@@ -206,7 +206,11 @@ set_speaker_light_locked(struct light_device_t* dev,
 static void
 handle_speaker_light_locked(struct light_device_t* dev)
 {
-    set_speaker_light_locked(dev, &g_battery);
+    if (is_lit(&g_battery)) {
+        set_speaker_light_locked(dev, &g_battery);
+    } else {
+        set_speaker_light_locked(dev, &g_notification);
+    }
 }
 
 static int
@@ -235,7 +239,7 @@ static int
 set_light_attention(struct light_device_t* dev,
         struct light_state_t const* state)
 {
-    //no attention light for supersonic
+    //no attention light for Tattoo
     return 0;
 }
 
@@ -312,7 +316,7 @@ const struct hw_module_t HAL_MODULE_INFO_SYM = {
     .version_major = 1,
     .version_minor = 0,
     .id = LIGHTS_HARDWARE_MODULE_ID,
-    .name = "Supersonic lights module",
+    .name = "Tattoo lights module",
     .author = "CyanogenMod",
     .methods = &lights_module_methods,
 };
