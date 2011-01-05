@@ -81,8 +81,6 @@ BOARD_EGL_CFG := device/htc/tattoo/egl.cfg
 
 BOARD_USES_QCOM_LIBS := true
 
-JS_ENGINE := v8
-
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 
 TARGET_OTA_ASSERT_DEVICE := bahamas
