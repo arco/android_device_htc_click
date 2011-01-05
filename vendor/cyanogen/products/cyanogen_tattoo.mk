@@ -24,7 +24,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/tattoo
 
 # Set ro.modversion
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=nFinityROM-1.16
+    ro.modversion=nFinityROM-1.17
 
 # Copy tattoo specific prebuilt files
 PRODUCT_COPY_FILES +=  \
