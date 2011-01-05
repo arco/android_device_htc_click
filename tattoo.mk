@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
 DEVICE_PACKAGE_OVERLAYS := device/htc/tattoo/overlay
 
 PRODUCT_LOCALES += mdpi
@@ -142,7 +140,7 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 $(call inherit-product, device/htc/common/common.mk)
-$(call inherit-product, build/target/product/full.mk)
+$(call inherit-product, build/target/product/full_base.mk)
 
 PRODUCT_NAME := generic_tattoo
 PRODUCT_DEVICE := tattoo
