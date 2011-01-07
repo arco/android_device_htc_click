@@ -112,6 +112,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.checkfs.fat=false
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.notification_sound=tweeters.ogg \
+    ro.config.alarm_alert=Alarm_Classic.ogg
+
 # Enable JIT by default
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.execution-mode=int:jit
