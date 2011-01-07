@@ -81,7 +81,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface = tiwlan0 \
     wifi.supplicant_scan_interval=45 \
-    ro.tether.denied=false
+    ro.tether.denied=true
 
 # density in DPI of the LCD of this board. This is used to scale the UI
 # appropriately. If this property is not defined, the default value is 120 dpi. 
