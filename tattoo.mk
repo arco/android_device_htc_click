@@ -14,15 +14,15 @@
 # limitations under the License.
 #
 
-DEVICE_PACKAGE_OVERLAYS := device/htc/tattoo/overlay
+DEVICE_PACKAGE_OVERLAYS += device/htc/tattoo/overlay
 
 # Live wallpaper packages
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     librs_jni
 
 # Publish that we support the live wallpaper feature.
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml \
     device/htc/tattoo/vold.fstab:system/etc/vold.fstab
 
@@ -33,9 +33,9 @@ PRODUCT_PACKAGES += \
     bahamas-keypad.kcm \
     sensors.bahamas \
     lights.bahamas \
-    gps.bahamas \
     copybit.bahamas \
     gralloc.bahamas \
+    gps.bahamas \
     libOmxCore \
     libmm-omxcore \
     wlan_loader \
@@ -57,7 +57,7 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml
 
-PRODUCT_PROPERTY_OVERRIDES := \
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.dec.jpeg.memcap=10000000
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -100,7 +100,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=0 \
     ro.com.android.dataroaming=false \
-    ro.com.google.locationfeatures=1
+    ro.com.google.locationfeatures=1 \
+    keyguard.no_require_sim=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=65536 \
@@ -144,5 +145,5 @@ $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 $(call inherit-product, device/htc/common/common.mk)
 $(call inherit-product, build/target/product/full_base.mk)
 
-PRODUCT_NAME := generic_tattoo
+PRODUCT_NAME := htc_tattoo
 PRODUCT_DEVICE := tattoo
