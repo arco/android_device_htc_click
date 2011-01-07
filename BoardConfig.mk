@@ -72,9 +72,8 @@ BOARD_EGL_CFG := device/htc/tattoo/egl.cfg
 
 BOARD_USES_QCOM_LIBS := true
 
-# Doesn't work yet, as AMSS realy should be 1355 for tattoo
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := bahamas
-BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 6225
+BOARD_USES_GPSSHIM := true
+BOARD_GPS_NEEDS_XTRA := true
 
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 

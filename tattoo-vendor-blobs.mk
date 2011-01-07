@@ -1,5 +1,6 @@
 # libgps is necessary to complete the compilation
 PRODUCT_COPY_FILES += \
+    device/htc/tattoo/proprietary/libgps.so:obj/lib/libgps.so \
     device/htc/tattoo/custom/logo.rle:root/logo.rle \
     device/htc/tattoo/proprietary/fakecam/libcamera.so:obj/lib/libcamera.so
 
@@ -45,6 +46,7 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/proprietary/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \
     device/htc/tattoo/proprietary/fakecam/liboemcamera.so:system/lib/liboemcamera.so \
     device/htc/tattoo/proprietary/fakecam/libcamera.so:system/lib/libcamera.so \
+    device/htc/tattoo/proprietary/libgps.so:system/lib/libgps.so \
     device/htc/tattoo/proprietary/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \
     device/htc/tattoo/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \
     device/htc/tattoo/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \
