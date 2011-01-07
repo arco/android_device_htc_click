@@ -15,8 +15,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/custom/10calibrate_screen:system/etc/init.d/10calibrate_screen \
     device/htc/tattoo/custom/hosts:system/etc/hosts \
-    device/htc/tattoo/custom/sysctl.conf:system/etc/sysctl.conf \
-    device/htc/tattoo/custom/apns-conf.xml:system/etc/apns-conf.xml
+    device/htc/tattoo/custom/sysctl.conf:system/etc/sysctl.conf
 
 # Tattoo Calibration apps
 PRODUCT_COPY_FILES += \
