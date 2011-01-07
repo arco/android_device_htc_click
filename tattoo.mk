@@ -16,8 +16,6 @@
 
 DEVICE_PACKAGE_OVERLAYS := device/htc/tattoo/overlay
 
-PRODUCT_LOCALES += mdpi
-
 # Live wallpaper packages
 PRODUCT_PACKAGES := \
     LiveWallpapersPicker \
