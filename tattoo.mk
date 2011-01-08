@@ -104,7 +104,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=65536 \
+    debug.sf.hw=1 \
+    ro.opengles.version=65537 \
     persist.sys.use_dithering=0
 
 # Disable fs check on boot by default
