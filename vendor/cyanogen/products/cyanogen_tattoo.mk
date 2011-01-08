@@ -20,7 +20,7 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/device/htc/tattoo/prelin
 WITH_WINDOWS_MEDIA := true
 
 # Extra Tattoo overlay
- PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/tattoo
+PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/tattoo
 
 # Set ro.modversion
 PRODUCT_PROPERTY_OVERRIDES += \
