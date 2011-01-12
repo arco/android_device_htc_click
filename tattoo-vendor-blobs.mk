@@ -51,6 +51,7 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \
     device/htc/tattoo/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \
     device/htc/tattoo/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \
+    device/htc/tattoo/proprietary/libaudioeq.so:system/lib/libaudioeq.so \
     device/htc/tattoo/proprietary/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \
     device/htc/tattoo/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so \
     device/htc/tattoo/keylayout/bahamas-keypad.kl:system/usr/keylayout/bahamas-keypad.kl \
