@@ -73,7 +73,6 @@ BOARD_EGL_CFG := device/htc/tattoo/egl.cfg
 BOARD_USES_QCOM_LIBS := true
 
 BOARD_USES_GPSSHIM := true
-BOARD_GPS_NEEDS_XTRA := true
 
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 
