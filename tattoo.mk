@@ -99,9 +99,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # 0 => WCDMA Preferred.
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=0 \
-    ro.com.android.dataroaming=false \
-    ro.com.google.locationfeatures=1 \
-    keyguard.no_require_sim=true
+    ro.com.google.locationfeatures=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \

@@ -59,8 +59,7 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     device/htc/tattoo/firmware/Fw1251r1c.bin:system/etc/wifi/Fw1251r1c.bin \
     device/htc/tattoo/firmware/brf6300.bin:system/etc/firmware/brf6300.bin \
-    device/htc/tattoo/firmware/brf6350.bin:system/etc/firmware/brf6350.bin \
-    device/htc/tattoo/firmware/tiinit_5.3.53.bts:system/etc/firmware/tiinit_5.3.53.bts
+    device/htc/tattoo/firmware/brf6350.bin:system/etc/firmware/brf6350.bin
 
 ifdef WITH_WINDOWS_MEDIA
 PRODUCT_COPY_FILES += \
