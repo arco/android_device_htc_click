@@ -75,7 +75,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="8dip"
+        android:layout_marginTop="2dip"
         >
 
         <!-- "Upper title" at the very top of the CallCard. -->
@@ -85,7 +85,7 @@
                   android:singleLine="true"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:layout_marginBottom="4dip"
+                  android:layout_marginBottom="2dip"
                   />
 
         <!-- "Person info": photo / name / number -->
