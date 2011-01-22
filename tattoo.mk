@@ -30,7 +30,6 @@ $(call inherit-product, device/htc/tattoo/tattoo-vendor-blobs.mk)
 
 PRODUCT_PACKAGES += \
     librs_jni \
-    bahamas-keypad.kcm \
     sensors.bahamas \
     lights.bahamas \
     copybit.bahamas \
