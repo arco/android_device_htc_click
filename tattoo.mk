@@ -56,6 +56,16 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml
 
+# keychars and keylayout files
+PRODUCT_COPY_FILES += \
+    device/htc/tattoo/keychars/bahamas-keypad.kcm.bin:system/usr/keychars/bahamas-keypad.kcm.bin \
+    device/htc/tattoo/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
+    device/htc/tattoo/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
+    device/htc/tattoo/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/htc/tattoo/keylayout/bahamas-keypad.kl:system/usr/keylayout/bahamas-keypad.kl \
+    device/htc/tattoo/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+    device/htc/tattoo/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.dec.jpeg.memcap=10000000
 

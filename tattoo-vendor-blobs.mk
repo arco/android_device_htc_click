@@ -50,15 +50,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/proprietary/akm8973:system/bin/akm8973
 
-# proprietary for /system/usr/keychars and /system/usr/keylayout
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/keychars/bahamas-keypad.kcm.bin:system/usr/keychars/bahamas-keypad.kcm.bin \
-    device/htc/tattoo/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
-    device/htc/tattoo/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
-    device/htc/tattoo/keylayout/bahamas-keypad.kl:system/usr/keylayout/bahamas-keypad.kl \
-    device/htc/tattoo/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-    device/htc/tattoo/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl
-
 # proprietary stuff
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \
