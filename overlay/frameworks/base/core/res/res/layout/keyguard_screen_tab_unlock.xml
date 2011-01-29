@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="8dip"
+            android:layout_marginTop="4dip"
             android:layout_marginRight="8dip"
             android:singleLine="true"
             android:ellipsize="marquee"
@@ -70,9 +70,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/carrier"
-            android:layout_marginTop="22dip"
+            android:layout_marginTop="20dip"
             android:layout_marginLeft="20dip"
-            android:paddingBottom="8dip"
+            android:paddingBottom="4dip"
             >
 
             <TextView android:id="@+id/timeDisplay"
@@ -86,7 +86,7 @@
                 android:shadowDx="0"
                 android:shadowDy="0"
                 android:shadowRadius="3.0"
-                android:layout_marginBottom="2dip"
+                android:layout_marginBottom="0dip"
                 />
 
             <TextView android:id="@+id/am_pm"
@@ -165,7 +165,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="132dip"
+            android:layout_marginBottom="128dip"
             />
 
         <com.android.internal.widget.SlidingTab
@@ -174,7 +174,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="42dip"
+            android:layout_marginBottom="40dip"
             />
 
         <com.android.internal.widget.RotarySelector
@@ -230,6 +230,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_media_previous"
             android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dip"
             android:padding="10px"
             android:layout_toLeftOf="@+id/musicControlPause"
             android:background="@color/transparent"
@@ -241,6 +242,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_media_next"
             android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dip"
             android:padding="10px"
             android:layout_toRightOf="@+id/musicControlPause"
             android:background="@color/transparent"
