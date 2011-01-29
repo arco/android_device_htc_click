@@ -66,6 +66,12 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/tattoo/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl
 
+# Firmware files
+PRODUCT_COPY_FILES += \
+    device/htc/tattoo/firmware/Fw1251r1c.bin:system/etc/wifi/Fw1251r1c.bin \
+    device/htc/tattoo/firmware/brf6300.bin:system/etc/firmware/brf6300.bin \
+    device/htc/tattoo/firmware/brf6350.bin:system/etc/firmware/brf6350.bin
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.dec.jpeg.memcap=10000000
 

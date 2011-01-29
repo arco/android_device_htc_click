@@ -65,10 +65,7 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \
     device/htc/tattoo/proprietary/libaudioeq.so:system/lib/libaudioeq.so \
     device/htc/tattoo/proprietary/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \
-    device/htc/tattoo/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so \
-    device/htc/tattoo/firmware/Fw1251r1c.bin:system/etc/wifi/Fw1251r1c.bin \
-    device/htc/tattoo/firmware/brf6300.bin:system/etc/firmware/brf6300.bin \
-    device/htc/tattoo/firmware/brf6350.bin:system/etc/firmware/brf6350.bin
+    device/htc/tattoo/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so
 
 ifdef WITH_WINDOWS_MEDIA
 PRODUCT_COPY_FILES += \
