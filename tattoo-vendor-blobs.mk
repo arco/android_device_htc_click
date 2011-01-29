@@ -16,42 +16,13 @@
 
 # libgps is necessary to complete the compilation
 PRODUCT_COPY_FILES += \
-    device/htc/tattoo/proprietary/libgps.so:obj/lib/libgps.so \
     device/htc/tattoo/custom/logo.rle:root/logo.rle \
+    device/htc/tattoo/proprietary/libgps.so:obj/lib/libgps.so \
     device/htc/tattoo/proprietary/fakecam/libcamera.so:obj/lib/libcamera.so
 
-# proprietary for modules
+# Proprietary stuff
 PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/modules.sqf:system/lib/modules/modules.sqf
-
-# custom backuptool
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/backuptool.sh:system/bin/backuptool.sh
-
-# proprietary for etc
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/10calibrate_screen:system/etc/init.d/10calibrate_screen \
-    device/htc/tattoo/custom/hosts:system/etc/hosts \
-    device/htc/tattoo/custom/sysctl.conf:system/etc/sysctl.conf
-
-# Tattoo calibration app
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/app/HTCCalibrate.apk:system/app/HTCCalibrate.apk
-
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/app/FancyWidget.apk:system/app/FancyWidget.apk
-
-# bin stuff
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/compcache:system/bin/compcache \
-    device/htc/tattoo/custom/rzscontrol:system/bin/rzscontrol
-
-# proprietary for /system/bin
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/proprietary/akm8973:system/bin/akm8973
-
-# proprietary stuff
-PRODUCT_COPY_FILES += \
+    device/htc/tattoo/proprietary/akm8973:system/bin/akm8973 \
     device/htc/tattoo/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \
     device/htc/tattoo/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \
     device/htc/tattoo/proprietary/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \

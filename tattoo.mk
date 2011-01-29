@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+$(call inherit-product, device/htc/tattoo/tattoo-vendor-blobs.mk)
+
 DEVICE_PACKAGE_OVERLAYS += device/htc/tattoo/overlay
 
 # Live wallpaper packages
@@ -23,10 +25,7 @@ PRODUCT_PACKAGES += \
 
 # Publish that we support the live wallpaper feature.
 PRODUCT_COPY_FILES += \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml \
-    device/htc/tattoo/vold.fstab:system/etc/vold.fstab
-
-$(call inherit-product, device/htc/tattoo/tattoo-vendor-blobs.mk)
+    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
 PRODUCT_PACKAGES += \
     librs_jni \
@@ -35,20 +34,20 @@ PRODUCT_PACKAGES += \
     copybit.bahamas \
     gralloc.bahamas \
     gps.bahamas \
-    libOmxCore \
     libmm-omxcore \
+    libOmxCore \
+    libOmxVidEnc
     wlan_loader \
     tiwlan.ini \
     dhcpcd.conf
+
+# Gallery 2D
+PRODUCT_PACKAGES += Gallery
 
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/init.bahamas.rc:root/init.bahamas.rc \
     device/htc/tattoo/ueventd.bahamas.rc:root/ueventd.bahamas.rc
 
-# Add normal Gallery
-PRODUCT_PACKAGES += Gallery
-
-# from device_dream_sapphire.mk
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -56,7 +55,7 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml
 
-# keychars and keylayout files
+# Keychars and keylayout files
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/keychars/bahamas-keypad.kcm.bin:system/usr/keychars/bahamas-keypad.kcm.bin \
     device/htc/tattoo/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
@@ -71,6 +70,22 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/firmware/Fw1251r1c.bin:system/etc/wifi/Fw1251r1c.bin \
     device/htc/tattoo/firmware/brf6300.bin:system/etc/firmware/brf6300.bin \
     device/htc/tattoo/firmware/brf6350.bin:system/etc/firmware/brf6350.bin
+
+PRODUCT_COPY_FILES += \
+    device/htc/tattoo/custom/10calibrate_screen:system/etc/init.d/10calibrate_screen \
+    device/htc/tattoo/custom/hosts:system/etc/hosts \
+    device/htc/tattoo/custom/sysctl.conf:system/etc/sysctl.conf \
+    device/htc/tattoo/vold.fstab:system/etc/vold.fstab
+
+PRODUCT_COPY_FILES += \
+    device/htc/tattoo/custom/backuptool.sh:system/bin/backuptool.sh \
+    device/htc/tattoo/custom/compcache:system/bin/compcache \
+    device/htc/tattoo/custom/rzscontrol:system/bin/rzscontrol
+
+# Extra apps
+PRODUCT_COPY_FILES += \
+    device/htc/tattoo/custom/app/HTCCalibrate.apk:system/app/HTCCalibrate.apk \
+    device/htc/tattoo/custom/app/FancyWidget.apk:system/app/FancyWidget.apk
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.dec.jpeg.memcap=10000000
@@ -98,7 +113,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.supplicant_scan_interval=45 \
     ro.tether.denied=true
 
-# density in DPI of the LCD of this board. This is used to scale the UI
+# Density in DPI of the LCD of this board. This is used to scale the UI
 # appropriately. If this property is not defined, the default value is 120 dpi. 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=120
@@ -141,7 +156,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.compcache.default=18
 
-# media configuration xml file
+# Media configuration xml file
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/media_profiles.xml:/system/etc/media_profiles.xml
 
@@ -154,6 +169,10 @@ endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
+
+# Modules
+PRODUCT_COPY_FILES += \
+    device/htc/tattoo/custom/modules.sqf:system/lib/modules/modules.sqf
 
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 $(call inherit-product, device/htc/common/common.mk)
