@@ -36,7 +36,7 @@ PRODUCT_PACKAGES += \
     gps.bahamas \
     libmm-omxcore \
     libOmxCore \
-    libOmxVidEnc
+    libOmxVidEnc \
     wlan_loader \
     tiwlan.ini \
     dhcpcd.conf
