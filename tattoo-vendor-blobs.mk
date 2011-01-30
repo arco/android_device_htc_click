@@ -37,13 +37,3 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/proprietary/libaudioeq.so:system/lib/libaudioeq.so \
     device/htc/tattoo/proprietary/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \
     device/htc/tattoo/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so
-
-ifdef WITH_WINDOWS_MEDIA
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/proprietary/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so \
-    device/htc/tattoo/proprietary/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so \
-    device/htc/tattoo/proprietary/libpvasfcommon.so:system/lib/libpvasfcommon.so \
-    device/htc/tattoo/proprietary/libpvasflocalpbreg.so:system/lib/libpvasflocalpbreg.so \
-    device/htc/tattoo/proprietary/libpvasflocalpb.so:system/lib/libpvasflocalpb.so \
-    device/htc/tattoo/proprietary/pvasflocal.cfg:system/etc/pvasflocal.cfg
-endif

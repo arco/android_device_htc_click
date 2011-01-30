@@ -14,9 +14,6 @@ PRODUCT_MODEL := HTC Tattoo
 PRODUCT_MANUFACTURER := HTC
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_tattoo BUILD_ID=FRG83 BUILD_DISPLAY_ID=GRH78C BUILD_FINGERPRINT=google/passion/passion/mahimahi:2.2.1/FRG83/60505:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.2.1 FRG83 60505 release-keys"
 
-# Enable Windows Media
-WITH_WINDOWS_MEDIA := true
-
 # Extra Tattoo overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/tattoo
 
