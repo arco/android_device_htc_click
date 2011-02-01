@@ -36,11 +36,6 @@ on boot
     chown system system /sys/class/leds/button-backlight/brightness
     chown system system /sys/class/leds/lcd-backlight/brightness
 
-    # for playing streaming
-    chown media media /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-
-    chown system system /dev/ttyHSUSB0
-
     # cpufreq configurations
     write /sys/devices/system/cpu/cpu0/cpufreq/ondemand/sampling_rate 40000
     write /sys/devices/system/cpu/cpu0/cpufreq/ondemand/up_threshold 85
