@@ -3,7 +3,7 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/custom/logo.rle:root/logo.rle \
     device/htc/tattoo/proprietary/libgps.so:obj/lib/libgps.so
 
-# proprietary stuff
+# Proprietary stuff
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \
     device/htc/tattoo/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \

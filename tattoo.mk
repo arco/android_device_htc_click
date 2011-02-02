@@ -32,12 +32,12 @@ DEVICE_PACKAGE_OVERLAYS := device/htc/tattoo/overlay
 PRODUCT_LOCALES += mdpi
 
 # Live wallpaper packages
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     librs_jni
 
 # Publish that we support the live wallpaper feature.
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
 $(call inherit-product, device/htc/tattoo/tattoo-vendor-blobs.mk)
@@ -50,7 +50,6 @@ PRODUCT_PACKAGES += \
 # Add normal Gallery
 PRODUCT_PACKAGES += Gallery
 
-# from device_dream_sapphire.mk
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -90,7 +89,7 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/custom/app/HTCCalibrate.apk:system/app/HTCCalibrate.apk \
     device/htc/tattoo/custom/app/FancyWidget.apk:system/app/FancyWidget.apk
 
-PRODUCT_PROPERTY_OVERRIDES := \
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.dec.jpeg.memcap=10000000
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -116,7 +115,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.supplicant_scan_interval=45 \
     ro.tether.denied=false
 
-# density in DPI of the LCD of this board. This is used to scale the UI
+# Density in DPI of the LCD of this board. This is used to scale the UI
 # appropriately. If this property is not defined, the default value is 120 dpi. 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=120
