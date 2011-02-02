@@ -23,6 +23,10 @@ TARGET_PREBUILT_KERNEL := device/htc/tattoo/custom/kernel
 endif # TARGET_KERNEL_CONFIG
 endif # TARGET_PREBUILT_KERNEL
 
+# Kernel modules
+PRODUCT_COPY_FILES += \
+    device/htc/tattoo/custom/modules.sqf:system/lib/modules/modules.sqf
+
 DEVICE_PACKAGE_OVERLAYS := device/htc/tattoo/overlay
 
 PRODUCT_LOCALES += mdpi
@@ -69,6 +73,22 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/firmware/Fw1251r1c.bin:system/etc/wifi/Fw1251r1c.bin \
     device/htc/tattoo/firmware/brf6300.bin:system/etc/firmware/brf6300.bin \
     device/htc/tattoo/firmware/brf6350.bin:system/etc/firmware/brf6350.bin
+
+PRODUCT_COPY_FILES += \
+    device/htc/tattoo/custom/05mountsd:system/etc/init.d/05mountsd \
+    device/htc/tattoo/custom/10calibrate_screen:system/etc/init.d/10calibrate_screen \
+    device/htc/tattoo/custom/hosts:system/etc/hosts \
+    device/htc/tattoo/custom/sysctl.conf:system/etc/sysctl.conf \
+    device/htc/tattoo/vold.fstab:system/etc/vold.fstab
+
+PRODUCT_COPY_FILES += \
+    device/htc/tattoo/custom/backuptool.sh:system/bin/backuptool.sh \
+    device/htc/tattoo/custom/compcache:system/bin/compcache
+    
+# Extra apps
+PRODUCT_COPY_FILES += \
+    device/htc/tattoo/custom/app/HTCCalibrate.apk:system/app/HTCCalibrate.apk \
+    device/htc/tattoo/custom/app/FancyWidget.apk:system/app/FancyWidget.apk
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.media.dec.jpeg.memcap=10000000

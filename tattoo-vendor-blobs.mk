@@ -3,35 +3,6 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/custom/logo.rle:root/logo.rle \
     device/htc/tattoo/proprietary/libgps.so:obj/lib/libgps.so
 
-# proprietary for modules
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/modules.sqf:system/lib/modules/modules.sqf
-
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/backuptool.sh:system/bin/backuptool.sh
-
-# proprietary for etc
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/05mountsd:system/etc/init.d/05mountsd \
-    device/htc/tattoo/custom/10calibrate_screen:system/etc/init.d/10calibrate_screen \
-    device/htc/tattoo/custom/hosts:system/etc/hosts \
-    device/htc/tattoo/custom/sysctl.conf:system/etc/sysctl.conf
-
-# Tattoo Calibration apps
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/app/HTCCalibrate.apk:system/app/HTCCalibrate.apk
-
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/app/FancyWidget.apk:system/app/FancyWidget.apk
-
-# proprietary for /system/bin
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/compcache:system/bin/compcache
-
-# Other bin stuff
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/proprietary/akm8973:system/bin/akm8973
-
 # proprietary stuff
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \
@@ -48,7 +19,8 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \
     device/htc/tattoo/proprietary/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \
     device/htc/tattoo/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so \
-    device/htc/tattoo/proprietary/sensors.bahamas.so:system/lib/hw/sensors.bahamas.so
+    device/htc/tattoo/proprietary/sensors.bahamas.so:system/lib/hw/sensors.bahamas.so \
+    device/htc/tattoo/proprietary/akm8973:system/bin/akm8973
 
 ifdef WITH_WINDOWS_MEDIA
 PRODUCT_COPY_FILES += \
