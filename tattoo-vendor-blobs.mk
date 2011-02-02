@@ -8,7 +8,6 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \
     device/htc/tattoo/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \
     device/htc/tattoo/proprietary/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \
-    device/htc/tattoo/proprietary/agps_rm:/system/etc/agps_rm \
     device/htc/tattoo/proprietary/libaudioeq.so:system/lib/libaudioeq.so \
     device/htc/tattoo/proprietary/libGLES_qcom.so:system/lib/egl/libGLES_qcom.so \
     device/htc/tattoo/proprietary/libgps.so:system/lib/libgps.so \
