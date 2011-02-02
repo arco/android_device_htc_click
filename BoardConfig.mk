@@ -82,9 +82,6 @@ TARGET_HARDWARE_3D := false
 # OpenGL drivers config file path
 BOARD_EGL_CFG := device/htc/tattoo/egl.cfg
 
-# No authoring clock for OpenCore
-# BOARD_NO_PV_AUTHORING_CLOCK := true
-
 BOARD_USES_QCOM_LIBS := true
 
 BOARD_USES_GPSSHIM := true
