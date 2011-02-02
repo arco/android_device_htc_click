@@ -28,11 +28,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/custom/compcache:system/bin/compcache
 
-# proprietary for /system/usr/keychars and /system/usr/keylayout
-PRODUCT_COPY_FILES += \
-    device/htc/tattoo/proprietary/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
-    device/htc/tattoo/proprietary/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin
-
 # Other bin stuff
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/proprietary/akm8973:system/bin/akm8973
@@ -53,9 +48,6 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \
     device/htc/tattoo/proprietary/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \
     device/htc/tattoo/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so \
-    device/htc/tattoo/proprietary/bahamas-keypad.kl:system/usr/keylayout/bahamas-keypad.kl \
-    device/htc/tattoo/proprietary/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-    device/htc/tattoo/proprietary/qwerty.kl:system/usr/keylayout/qwerty.kl \
     device/htc/tattoo/proprietary/sensors.bahamas.so:system/lib/hw/sensors.bahamas.so \
     device/htc/tattoo/firmware/Fw1251r1c.bin:system/etc/wifi/Fw1251r1c.bin \
     device/htc/tattoo/firmware/brf6300.bin:system/etc/firmware/brf6300.bin \
