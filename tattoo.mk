@@ -34,6 +34,7 @@ PRODUCT_PACKAGES += \
     copybit.bahamas \
     gralloc.bahamas \
     gps.bahamas \
+    libcamera \
     libmm-omxcore \
     libOmxCore \
     libOmxVidEnc \
