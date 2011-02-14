@@ -170,9 +170,9 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
-# Modules
+# Wifi module
 PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/modules.sqf:system/lib/modules/modules.sqf
+    device/htc/tattoo/custom/wlan.ko:system/lib/modules/wlan.ko
 
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 $(call inherit-product, device/htc/common/common.mk)
