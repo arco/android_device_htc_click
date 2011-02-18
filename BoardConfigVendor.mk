@@ -17,6 +17,3 @@
 BOARD_GPS_LIBRARIES := libgps librpc
 
 USE_CAMERA_STUB := false
-
-# Use libcamera2
-BOARD_USES_OLD_CAMERA_HACK := true

@@ -23,9 +23,9 @@ TARGET_PREBUILT_KERNEL := device/htc/tattoo/custom/kernel
 endif # TARGET_KERNEL_CONFIG
 endif # TARGET_PREBUILT_KERNEL
 
-# Kernel modules
+# Wifi module
 PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/modules.sqf:system/lib/modules/modules.sqf
+    device/htc/tattoo/custom/wlan.ko:system/lib/modules/wlan.ko
 
 DEVICE_PACKAGE_OVERLAYS := device/htc/tattoo/overlay
 
