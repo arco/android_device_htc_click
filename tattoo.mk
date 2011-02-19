@@ -81,6 +81,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/custom/backuptool.sh:system/bin/backuptool.sh \
     device/htc/tattoo/custom/compcache:system/bin/compcache \
+    device/htc/tattoo/custom/handle_compcache:system/bin/handle_compcache \
     device/htc/tattoo/custom/rzscontrol:system/bin/rzscontrol
 
 # Extra apps
