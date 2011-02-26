@@ -88,4 +88,8 @@
     <!-- Handle notifications differently if device only uses an amber/green
     LED. This also needs a liblights module that enables them accordingly. -->
     <bool name="config_amber_green_light">false</bool>
+
+    <!-- Configure rotary bottom margin -->
+    <integer name="config_rotaryMarginBottomDIP">37</integer>
+
 </resources>
