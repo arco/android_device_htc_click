@@ -104,18 +104,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.enable.a53.HTC-ITA=1 \
     ro.ril.enable.a52=0 \
     ro.ril.enable.a53=1 \
-    ro.ril.enable.dtm = 1 \
-    ro.ril.gprsclass = 12 \
+    ro.ril.enable.dtm=1 \
+    ro.ril.gprsclass=12 \
     ro.ril.hsdpa.category=8 \
     ro.ril.hsupa.category=5 \
     ro.ril.hsxpa=2 \
-    ro.ril.def.agps.mode = 2
+    ro.ril.def.agps.mode=2
 
 # Time between scans in seconds. Keep it high to minimize battery drain.
 # This only affects the case in which there are remembered access points,
 # but none are in range.
 PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface = tiwlan0 \
+    wifi.interface=tiwlan0 \
     wifi.supplicant_scan_interval=45 \
     ro.tether.denied=true
 
