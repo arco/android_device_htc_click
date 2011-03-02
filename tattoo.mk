@@ -87,9 +87,7 @@ PRODUCT_COPY_FILES += \
 # Extra apps
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/custom/app/HTCCalibrate.apk:system/app/HTCCalibrate.apk \
-    device/htc/tattoo/custom/app/FancyWidget.apk:system/app/FancyWidget.apk \
-    device/htc/tattoo/custom/app/wired_tether.apk:system/app/wired_tether.apk \
-    device/htc/tattoo/custom/app/barnacle.apk:system/app/barnacle.apk
+    device/htc/tattoo/custom/app/FancyWidget.apk:system/app/FancyWidget.apk
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.dec.jpeg.memcap=10000000
