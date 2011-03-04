@@ -92,7 +92,7 @@ TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 BOARD_NO_RGBX_8888 := true
 
 # libsurfaceflinger to avoid Draw Texture Extension
-AVOID_DRAW_TEXTURE_EXTENSION := true
+BOARD_AVOID_DRAW_TEXTURE_EXTENSION := true
 
 JS_ENGINE := v8
 
