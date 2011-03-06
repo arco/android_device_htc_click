@@ -12,14 +12,17 @@ PRODUCT_BRAND := htc
 PRODUCT_DEVICE := tattoo
 PRODUCT_MODEL := HTC Tattoo
 PRODUCT_MANUFACTURER := HTC
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_tattoo BUILD_ID=FRG83 BUILD_DISPLAY_ID=GRH78C BUILD_FINGERPRINT=google/passion/passion/mahimahi:2.2.1/FRG83/60505:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.2.1 FRG83 60505 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_tattoo BUILD_ID=GRI40 BUILD_DISPLAY_ID=GRI40 BUILD_FINGERPRINT=google/passion/passion:2.3.3/GRI40/102588:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.3.3 GRI40 102588 release-keys"
 
 # Extra Tattoo overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/tattoo
 
+# FM radio
+$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+
 # Set ro.modversion
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=nFinityGB-0.5
+    ro.modversion=nFinityGB-0.82
 
 # Copy tattoo specific prebuilt files
 PRODUCT_COPY_FILES +=  \
