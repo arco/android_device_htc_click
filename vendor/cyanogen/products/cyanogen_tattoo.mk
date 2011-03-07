@@ -17,8 +17,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_tattoo BUILD_ID=GRI40 BUILD_DIS
 # Extra Tattoo overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/tattoo
 
-# FM radio
-$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+# TI FM radio
+$(call inherit-product, vendor/cyanogen/products/ti_fm_radio.mk)
 
 # Set ro.modversion
 PRODUCT_PROPERTY_OVERRIDES += \

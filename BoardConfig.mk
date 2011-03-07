@@ -48,13 +48,13 @@ TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/tattoo/custom/recovery_kernel
 TARGET_PREBUILT_KERNEL := device/htc/tattoo/custom/kernel
 
 # Wifi related defines
-BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
+BOARD_WPA_SUPPLICANT_DRIVER      := CUSTOM
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := libWifiApi
-BOARD_WLAN_TI_STA_DK_ROOT   := system/wlan/ti/sta_dk_4_0_4_32
-WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/wlan.ko"
-WIFI_DRIVER_MODULE_ARG      := ""
-WIFI_DRIVER_MODULE_NAME     := "wlan"
-WIFI_FIRMWARE_LOADER        := "wlan_loader"
+BOARD_WLAN_DEVICE                := wl1251
+BOARD_WLAN_TI_STA_DK_ROOT        := system/wlan/ti/sta_dk_4_0_4_32
+WIFI_DRIVER_MODULE_PATH          := /system/lib/modules/wlan.ko
+WIFI_DRIVER_MODULE_NAME          := wlan
+WIFI_FIRMWARE_LOADER             := wlan_loader
 
 TARGET_PROVIDES_INIT_RC := false
 
