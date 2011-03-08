@@ -72,13 +72,13 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/firmware/brf6350.bin:system/etc/firmware/brf6350.bin
 
 PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/10calibrate_screen:system/etc/init.d/10calibrate_screen \
     device/htc/tattoo/custom/hosts:system/etc/hosts \
     device/htc/tattoo/custom/sysctl.conf:system/etc/sysctl.conf \
     device/htc/tattoo/vold.fstab:system/etc/vold.fstab
 
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/custom/backuptool.sh:system/bin/backuptool.sh \
+    device/htc/tattoo/custom/calibrate_screen:system/bin/calibrate_screen \
     device/htc/tattoo/custom/compcache:system/bin/compcache \
     device/htc/tattoo/custom/handle_compcache:system/bin/handle_compcache \
     device/htc/tattoo/custom/rzscontrol:system/bin/rzscontrol
