@@ -20,7 +20,7 @@ on boot
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
 
-    # write screen calibration
+    # write initial screen calibration
     write /sys/class/input/input1/calibration_points 837,864,166,859,507,503,844,142,167,142
 
     # bluetooth power up/down interface
@@ -28,7 +28,7 @@ on boot
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chmod 0660 /sys/class/rfkill/rfkill0/state
 
-    # Permissions for Liblights.
+    # permissions for liblights
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/green/blink
     chown system system /sys/class/leds/amber/brightness
@@ -36,16 +36,21 @@ on boot
     chown system system /sys/class/leds/button-backlight/brightness
     chown system system /sys/class/leds/lcd-backlight/brightness
 
-# performance tweaks for flash
+    # performance tweaks for flash
     write /sys/block/mtdblock3/bdi/read_ahead_kb 4
     write /sys/block/mtdblock4/bdi/read_ahead_kb 4
     write /sys/block/mtdblock5/bdi/read_ahead_kb 4
+
+    # enable low memory killer to check file pages
+    write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,5120,5632,6144
+    write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
 # compass/accelerometer daemon
 service akm8973 /system/bin/akm8973
     user compass
     group compass misc input
 
+# load custom screen calibration
 service calibrate_screen /system/bin/calibrate_screen
     user root
     group root
