@@ -81,9 +81,6 @@ BOARD_HAS_LIMITED_EGL := true
 
 TARGET_HARDWARE_3D := false
 
-# OpenGL drivers config file path
-BOARD_EGL_CFG := device/htc/tattoo/egl.cfg
-
 BOARD_USES_QCOM_LIBS := true
 
 BOARD_USES_GPSSHIM := true
