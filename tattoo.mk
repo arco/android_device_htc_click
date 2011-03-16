@@ -89,7 +89,7 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/custom/app/FancyWidget.apk:system/app/FancyWidget.apk
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.media.dec.jpeg.memcap=10000000
+    ro.media.dec.jpeg.memcap=20000000
 
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libhtc_ril.so \
