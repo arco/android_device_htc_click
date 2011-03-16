@@ -1,8 +1,22 @@
 /*
-    Version: 1.0
-    Coded by: Josebagar <joseba.gar@gmail.com> 02/2011 (linux version)
-    Revised and Recoded: KalimochoAz <calimochoazucarado@gmail.com> 02/2011 (android conversions) Done for CyanogenMOD
-    Free code: feel free to use, copy, modify or criticize. But please leave it as free code always
+** Copyright 2008, Google Inc.
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+/*
+**    Version: 1.0
+**    Coded by: Josebagar <joseba.gar@gmail.com> 02/2011 (linux version)
+**    Revised and Recoded: KalimochoAz <calimochoazucarado@gmail.com> 02/2011 (android conversions) Done for CyanogenMOD
 */
 #include <stdio.h>
 #include <stdint.h>
@@ -29,11 +43,10 @@ YuvToJpegEncoder::YuvToJpegEncoder(int* strides) : fStrides(strides) {
 }
 
 bool YuvToJpegEncoder::encode(unsigned char* dest, void* inYuv, int width,
-        int height, int* offsets, int jpegQuality) {
+        int height, int* offsets, int jpegQuality, uint32_t* mSize) {
     struct jpeg_compress_struct cinfo;
     struct jpeg_error_mgr jerr;
     long unsigned int image_size;
-    unsigned char* ucDest;
 
     // Warning, this is ONLY valid for YUV420SP (ImageFormat.NV21 in android)
     image_size = (width*height*1.5);
@@ -53,6 +66,8 @@ bool YuvToJpegEncoder::encode(unsigned char* dest, void* inYuv, int width,
 
     jpeg_finish_compress(&cinfo);
 
+    *mSize = (uint32_t) image_size;
+    mJpegTam = (uint32_t) image_size;
     return true;
 }
 
@@ -145,7 +160,7 @@ void Yuv420SpToJpegEncoder::configSamplingFactors(jpeg_compress_struct* cinfo) {
 
 ///////////////////////////////////////////////////////////////////////////////
 
-int yuv420_save2jpeg(unsigned char *dest, void *src, int width, int height, int quality) {
+int yuv420_save2jpeg(unsigned char *dest, void *src, int width, int height, int quality, uint32_t *mSize) {
     int imgStrides[2], imgOffsets[2];
 
     // Convert the RAW data to JPEG
@@ -159,7 +174,7 @@ int yuv420_save2jpeg(unsigned char *dest, void *src, int width, int height, int 
     // in android
     imgOffsets[0] = 0;
     imgOffsets[1] = width*height;
-    encoder->encode(dest, src, width, height, imgOffsets, quality);
+    encoder->encode(dest, src, width, height, imgOffsets, quality, mSize);
 
     delete encoder;
 
