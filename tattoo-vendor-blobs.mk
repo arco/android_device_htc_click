@@ -16,7 +16,6 @@
 
 # libgps is necessary to complete the compilation
 PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/logo.rle:root/logo.rle \
     device/htc/tattoo/proprietary/libgps.so:obj/lib/libgps.so
 
 # Proprietary stuff
