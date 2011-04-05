@@ -49,6 +49,8 @@ ro.workaround.noautofocus=1
 # 0 => WCDMA Preferred.
 ro.telephony.default_network=0
 
+# Enable Google-specific location features,
+# like NetworkLocationProvider and LocationCollector.
 ro.com.google.locationfeatures=1
     
 # The OpenGL ES API level that is natively supported by this device.
