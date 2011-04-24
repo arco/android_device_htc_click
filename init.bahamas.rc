@@ -20,6 +20,8 @@ on boot
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
 
+    chown radio radio /sys/module/pm/parameters/idle_sleep_mode
+
     # write initial screen calibration
     write /sys/class/input/input1/calibration_points 837,864,166,859,507,503,844,142,167,142
 
