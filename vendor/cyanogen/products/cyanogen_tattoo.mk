@@ -17,9 +17,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_tattoo BUILD_ID=GRI40 BUILD_DIS
 # Add LDPI assets, in addition to MDPI
 PRODUCT_LOCALES += ldpi mdpi
 
-# Extra Tattoo overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/tattoo
-
 # Extra overlay for LDPI
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/ldpi
 
