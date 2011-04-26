@@ -20,6 +20,9 @@ PRODUCT_LOCALES += ldpi mdpi
 # Extra overlay for LDPI
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/ldpi
 
+# Include extra dictionaries for LatinIME
+PRODUCT_PACKAGE_OVERLAYS += device/htc/tattoo/overlay/dictionaries
+
 # TI FM radio
 $(call inherit-product, vendor/cyanogen/products/ti_fm_radio.mk)
 
