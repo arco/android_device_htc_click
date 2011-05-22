@@ -16,7 +16,7 @@
 
 $(call inherit-product, device/htc/tattoo/tattoo-vendor-blobs.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/htc/tattoo/overlay
+DEVICE_PACKAGE_OVERLAYS := device/htc/tattoo/overlay
 
 # Live wallpaper packages
 PRODUCT_PACKAGES += \
