@@ -84,7 +84,11 @@ service wpa_supplicant /system/bin/wpa_supplicant \
     disabled
     oneshot
 
-service dhcpcd_tiwlan0 /system/bin/dhcpcd -ABKL tiwlan0
+service dhcpcd_tiwlan0 /system/bin/dhcpcd -ABKL
+    disabled
+    oneshot
+
+service iprenew_tiwlan0 /system/bin/dhcpcd -n
     disabled
     oneshot
 
