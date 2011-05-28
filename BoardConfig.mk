@@ -94,6 +94,8 @@ BOARD_NO_RGBX_8888 := true
 # libsurfaceflinger to avoid Draw Texture Extension
 BOARD_AVOID_DRAW_TEXTURE_EXTENSION := true
 
+TARGET_ELECTRONBEAM_FRAMES := 10
+
 JS_ENGINE := v8
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
