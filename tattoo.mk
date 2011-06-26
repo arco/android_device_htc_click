@@ -87,7 +87,7 @@ PRODUCT_COPY_FILES += \
 # Extra apps
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/custom/app/HTCCalibrate.apk:system/app/HTCCalibrate.apk \
-    device/htc/tattoo/custom/app/FancyWidget.apk:system/app/FancyWidget.apk \
+    device/htc/tattoo/custom/app/FancyWidgets.apk:system/app/FancyWidgets.apk \
     device/htc/tattoo/custom/app/ADWNotifier.apk:system/app/ADWNotifier.apk
 
 # Media configuration xml file
