@@ -20,6 +20,10 @@ on boot
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
 
+    # mount tmp cache system to speed up photo taking
+    mkdir /cache/tmp 0666 system system
+    mount tmpfs tmpfs /cache/tmp
+
     chown radio radio /sys/module/pm/parameters/idle_sleep_mode
 
     # for disabling IPv6 over mobile network
