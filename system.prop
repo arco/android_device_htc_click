@@ -40,7 +40,7 @@ wifi.interface=tiwlan0
 wifi.supplicant_scan_interval=45
 
 # Allow or deny tethering
-ro.tether.denied=true
+ro.tether.denied=false
 
 # For no auto focus devices
 ro.workaround.noautofocus=1

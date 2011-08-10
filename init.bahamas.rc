@@ -20,6 +20,9 @@ on boot
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
 
+    chown radio system /sys/module/gpio_event/parameters/phone_call_status
+    chmod 0664 /sys/module/gpio_event/parameters/phone_call_status
+
     # mount tmp cache system to speed up photo taking
     mkdir /cache/tmp 0666 system system
     mount tmpfs tmpfs /cache/tmp
@@ -38,8 +41,8 @@ on boot
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chmod 0660 /sys/class/rfkill/rfkill0/state
-    chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/serial_lock_cpu
-    chmod 0660 /sys/devices/platform/msm_serial_hs.0/serial_lock_cpu
+    chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs_ti.0/serial_lock_cpu
+    chmod 0660 /sys/devices/platform/msm_serial_hs_ti.0/serial_lock_cpu
 
     # permissions for liblights
     chown system system /sys/class/leds/green/brightness
@@ -62,15 +65,15 @@ on boot
     write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
 # compass/accelerometer daemon
-service akm8973 /system/bin/akm8973
+service akmd /system/bin/akmd
     user compass
     group compass misc input
 
 # load custom screen calibration
-service calibrate_screen /system/bin/calibrate_screen
-    user root
-    group root
-    oneshot
+#service calibrate_screen /system/bin/calibrate_screen
+#    user root
+#    group root
+#    oneshot
 
 service wlan_loader /system/bin/wlan_loader \
     -f /system/etc/wifi/Fw1251r1c.bin -e /proc/calibration \

@@ -34,7 +34,6 @@ PRODUCT_PACKAGES += \
     copybit.bahamas \
     gralloc.bahamas \
     gps.bahamas \
-    libcamera \
     libmm-omxcore \
     libOmxCore \
     libOmxVidEnc \
@@ -69,6 +68,7 @@ PRODUCT_COPY_FILES += \
 # Firmware files
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/firmware/Fw1251r1c.bin:system/etc/wifi/Fw1251r1c.bin \
+    device/htc/tattoo/firmware/tiinit_5.3.53.bts:system/etc/wifi/tiinit_5.3.53.bts \
     device/htc/tattoo/firmware/brf6300.bin:system/etc/firmware/brf6300.bin \
     device/htc/tattoo/firmware/brf6350.bin:system/etc/firmware/brf6350.bin
 
@@ -78,15 +78,10 @@ PRODUCT_COPY_FILES += \
     device/htc/tattoo/vold.fstab:system/etc/vold.fstab
 
 PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/backuptool.sh:system/bin/backuptool.sh \
-    device/htc/tattoo/custom/calibrate_screen:system/bin/calibrate_screen \
-    device/htc/tattoo/custom/compcache:system/bin/compcache \
-    device/htc/tattoo/custom/handle_compcache:system/bin/handle_compcache \
-    device/htc/tattoo/custom/rzscontrol:system/bin/rzscontrol
+    device/htc/tattoo/custom/backuptool.sh:system/bin/backuptool.sh
 
 # Extra apps
 PRODUCT_COPY_FILES += \
-    device/htc/tattoo/custom/app/HTCCalibrate.apk:system/app/HTCCalibrate.apk \
     device/htc/tattoo/custom/app/FancyWidgets.apk:system/app/FancyWidgets.apk \
     device/htc/tattoo/custom/app/ADWNotifier.apk:system/app/ADWNotifier.apk
 

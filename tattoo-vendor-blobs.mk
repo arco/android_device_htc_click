@@ -20,7 +20,7 @@ PRODUCT_COPY_FILES += \
 
 # Proprietary stuff
 PRODUCT_COPY_FILES += \
-    device/htc/tattoo/proprietary/akm8973:system/bin/akm8973 \
+    device/htc/tattoo/proprietary/akmd:system/bin/akmd \
     device/htc/tattoo/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \
     device/htc/tattoo/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \
     device/htc/tattoo/proprietary/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \
