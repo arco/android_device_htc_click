@@ -70,10 +70,10 @@ service akmd /system/bin/akmd
     group compass misc input
 
 # load custom screen calibration
-#service calibrate_screen /system/bin/calibrate_screen
-#    user root
-#    group root
-#    oneshot
+service calibrate_screen /system/bin/calibrate_screen
+    user root
+    group root
+    oneshot
 
 service wlan_loader /system/bin/wlan_loader \
     -f /system/etc/wifi/Fw1251r1c.bin -e /proc/calibration \
