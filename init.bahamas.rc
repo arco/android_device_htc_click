@@ -23,16 +23,13 @@ on boot
     chown radio system /sys/module/gpio_event/parameters/phone_call_status
     chmod 0664 /sys/module/gpio_event/parameters/phone_call_status
 
+    chown radio radio /sys/class/htc_ecompass/ecompass/PhoneOnOffFlag
+
     # mount tmp cache system to speed up photo taking
     mkdir /cache/tmp 0666 system system
     mount tmpfs tmpfs /cache/tmp
 
     chown radio radio /sys/module/pm/parameters/idle_sleep_mode
-
-    # for disabling IPv6 over mobile network
-    write /proc/sys/net/ipv6/conf/rmnet0/disable_ipv6 1
-    write /proc/sys/net/ipv6/conf/rmnet1/disable_ipv6 1
-    write /proc/sys/net/ipv6/conf/rmnet2/disable_ipv6 1
 
     # write initial screen calibration
     write /sys/class/input/input1/calibration_points 837,864,166,859,507,503,844,142,167,142
