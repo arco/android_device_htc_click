@@ -39,8 +39,7 @@ PRODUCT_PACKAGES += \
     libOmxVidEnc \
     wlan_loader \
     tiwlan.ini \
-    dhcpcd.conf \
-    com.android.future.usb.accessory
+    dhcpcd.conf
 
 # Gallery 2D
 PRODUCT_PACKAGES += Gallery
@@ -55,8 +54,7 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
-    frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml
+    frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 # Keychars and keylayout files
 PRODUCT_COPY_FILES += \
@@ -85,7 +83,6 @@ PRODUCT_COPY_FILES += \
 # Extra apps
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/custom/app/HTCCalibrate.apk:system/app/HTCCalibrate.apk \
-    device/htc/tattoo/custom/app/FancyWidgets.apk:system/app/FancyWidgets.apk \
     device/htc/tattoo/custom/app/ADWNotifier.apk:system/app/ADWNotifier.apk
 
 # Media configuration xml file
