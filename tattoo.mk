@@ -73,7 +73,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/htc/tattoo/custom/hosts:system/etc/hosts \
-    device/htc/tattoo/custom/sysctl.conf:system/etc/sysctl.conf \
     device/htc/tattoo/vold.fstab:system/etc/vold.fstab
 
 PRODUCT_COPY_FILES += \
