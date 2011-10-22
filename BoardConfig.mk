@@ -43,6 +43,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 BOARD_LDPI_RECOVERY := true
+BOARD_HAS_JANKY_BACKBUFFER := true
 
 TARGET_PREBUILT_KERNEL := device/htc/tattoo/custom/kernel
 
