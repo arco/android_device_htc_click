@@ -72,8 +72,6 @@ on boot
     write /proc/sys/net/core/rmem_max 262144
     write /proc/sys/net/core/wmem_max 262144
 
-    setrlimit 8 268435456 268435456
-
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
     user compass
